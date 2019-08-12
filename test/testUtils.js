@@ -1,13 +1,14 @@
-import checkPropTypes from 'check-prop-types'
+import checkPropTypes from "check-prop-types";
 
-export const findByTestAttr = (wrapper, val) => wrapper.find(`[data-test="${val}"]`)
+export const findByTestAttr = (wrapper, val) =>
+  wrapper.find(`[data-test="${val}"]`);
 
 export const checkProps = (component, conformingProps) => {
   const propError = checkPropTypes(
     component.propTypes,
     conformingProps,
-    'prop',
+    "prop",
     component.name
-  )
-  expect(propError).toBeUndefined()
-}
+  );
+  expect(propError).toBeUndefined();
+};
